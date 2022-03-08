@@ -1,0 +1,12 @@
+[Unit]
+Description=serv l service
+
+[Service]
+WorkingDirectory=/var/www/srvlst/
+ExecStart=/var/www/srvlst/srv
+Restart=on-failure
+StandardOutput=append:/var/log/srv.out.log
+StandardError=append:/var/log/srv.error.log
+
+[Install]
+WantedBy=multi-user.target
